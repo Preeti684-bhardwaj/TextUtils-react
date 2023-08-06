@@ -43,7 +43,7 @@ const About = (props) => {
                         </button>
                     </h2>
                     <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div className="accordion-body"  style={myStyle}>
+                        <div className="accordion-body" >
                          <strong>Seamlessly copy the manipulated text to your clipboard for easy sharing and editing.</strong>
                         </div>
                     </div>
