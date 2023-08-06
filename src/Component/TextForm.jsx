@@ -55,11 +55,11 @@ const TextForm = (props) => {
         <div className="mb-3">
           <textarea className="form-control" value={text} onChange={handleOnChange} id="textBox" placeholder='Enter Your Text In LowerCase' style={{backgroundColor:props.mode==='dark'?'#38516a':'white', color:props.mode==='dark'?'white':'black', height:'140px'}}></textarea>
         </div>
-        <button className="btn btn-primary mx-2 my-1" onClick={handleClick}>Convert To Uppercase</button>
-        <button className="btn btn-primary mx-2 my-1" onClick={handleLowClick}>Convert To Lowercase</button>
-        <button className="btn btn-primary mx-2  my-1" onClick={handleClearClick}>Clear Text</button>
-        <button className="btn btn-primary mx-2 my-1" onClick={handleCopy}>Copy Text</button>
-        <button className="btn btn-primary mx-2 my-1" onClick={removeSpace}>Remove Extra Spaces</button>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleClick} disabled={text.length===0}>Convert To Uppercase</button>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleLowClick} disabled={text.length===0}>Convert To Lowercase</button>
+        <button className="btn btn-primary mx-2  my-1" onClick={handleClearClick} disabled={text.length===0}>Clear Text</button>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleCopy} disabled={text.length===0}>Copy Text</button>
+        <button className="btn btn-primary mx-2 my-1" onClick={removeSpace} disabled={text.length===0}>Remove Extra Spaces</button>
       </div>
       <div className="container my-3" style={{color:props.mode==='dark'?'white':'black'}}>
         <h1>Your Text Summary</h1>
